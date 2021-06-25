@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiB2bTest", "SdkApiB2bTest\SdkApiB2bTest.csproj", "{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkApiB2bLibrary", "SdkApiB2bLibrary\SdkApiB2bLibrary.csproj", "{708410EC-BB72-48BF-9C53-C245745EC24E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18AE414-193A-454E-8D6D-33AFB3B1EB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708410EC-BB72-48BF-9C53-C245745EC24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708410EC-BB72-48BF-9C53-C245745EC24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708410EC-BB72-48BF-9C53-C245745EC24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708410EC-BB72-48BF-9C53-C245745EC24E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BC70E29-E092-40D6-839A-7AFDF697DE37}
+	EndGlobalSection
+EndGlobal
