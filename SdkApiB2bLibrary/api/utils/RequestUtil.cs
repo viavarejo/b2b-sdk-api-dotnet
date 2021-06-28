@@ -13,18 +13,14 @@ namespace SdkApiB2bLibrary.utils
         private const string BASE_PATH = "http://api-integracao-extra.hlg-b2b.net";
         private readonly string token = "H9xO4+R8GUy+18nUCgPOlg==";
 
-        private HttpClient client = new ();
+        private HttpClient client = new();
 
         public RequestUtil()
         {
             client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
 
         }
-        public async Task<OUT> DoGetAsync(string path, string token, Dictionary<String, String> queryParams)
-        {
-            //client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token);
-            return await DoGetAsync( path,  queryParams);
-        }
+
         public async Task<OUT> DoGetAsync(string path, Dictionary<String, String> queryParams)
         {
             string fullPath = BASE_PATH + path;
@@ -36,13 +32,14 @@ namespace SdkApiB2bLibrary.utils
 
             try
             {
-            HttpResponseMessage response = await client.GetAsync(fullPath);
-        //    response.EnsureSuccessStatusCode();
-            string jsonContent = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<OUT>(jsonContent);
-            return result;
+                HttpResponseMessage response = await client.GetAsync(fullPath);
+                //    response.EnsureSuccessStatusCode();
+                string jsonContent = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<OUT>(jsonContent);
+                return result;
 
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -50,10 +47,6 @@ namespace SdkApiB2bLibrary.utils
             return default;
         }
 
-        internal void DoGetAsync(object p)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<OUT> DoPostAsync(string path, IN entityIn)
         {
@@ -62,7 +55,7 @@ namespace SdkApiB2bLibrary.utils
             Console.WriteLine($"body entrada: {json}");
             StringContent data = new(json, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await client.PostAsync(fullPath, data);
-            string jsonContent = response.Content.ReadAsStringAsync().Result;   
+            string jsonContent = response.Content.ReadAsStringAsync().Result;
             var result = JsonConvert.DeserializeObject<OUT>(jsonContent);
             return result;
         }
