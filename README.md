@@ -1,7 +1,7 @@
 # sdk-csharp
 Projet
 
-# SDK Java para API B2B
+# SDK dotnet para API B2B
 
 Provê os componentes para o uso da API B2B, disponibilizado pela VIA, facilitando a integração com as documentações relacionadas:
 
@@ -12,30 +12,29 @@ Provê os componentes para o uso da API B2B, disponibilizado pela VIA, facilitan
 | http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#/ |
 
 ## Configurando o SDK
- Dentro da pasta [src/main/resources] se encontra o arquivo de propriedades (config.properties), o qual deve ser configurado duas propriedades: 
- - host  (end-point utilizado).
+ Dentro do namespace [SdkApiB2bLibrary.api.utils] se encontra a classe reponsavel pelas requisições, a qual deve ser configurada duas propriedades: 
+ - BASE_PATH  (end-point utilizado).
  - token (token de acesso).
  
 ## APIs Disponíveis
 
-O pacote [br.com.via.api] contem as classes:
+O namespace [SdkApiLibrary.api] contem as classes:
 * CampanhaApi.cs
 * FormaPagamentoApi.cs
 * PedidoApi.cs
 * ProdutoApi.cs
 * SegurancaApi.cs
 
-Estas compõe a camada de acesso para os serviços disponibilizados pelo B2B, alguns exemplos de como utiliza-lá estão disponíveis 
+Estas compõe a camada de acesso para os serviços disponibilizados pelo B2B, alguns exemplos de como utiliza-lá estão disponíveis nos testes unitarios
 
 A seguir, são apresentadas as APIs e exemplos com as as principais operações do B2B.
 
 - ## Campanha
     Api Utilizada para operações de campanha
-    | Obtém todas as campanhas vinculadas ao parceiro: |
-    | ------ | 
-    | http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarCampanhaAsync |
-    | http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarCampanhaAsync |
-    | http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarCampanhaAsync |
+    ## Obtém todas as campanhas vinculadas ao parceiro: 
+    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarCampanhaAsync 
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarCampanhaAsync 
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarCampanhaAsync 
 
     ```csharp
 	    CampanhaApi api = new();
@@ -44,11 +43,10 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
     
 	***
     
-    | Obtém todas as opções de pagamento para uma determinada campanha: |
-    | ------ | 
-    | http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Campanha/Campanha_ListarOpcoesParcelamentoAsync |
-    | http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarOpcoesParcelamentoAsync |
-    | http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarOpcoesParcelamentoAsync |
+    ## Obtém todas as opções de pagamento para uma determinada campanha: 
+    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Campanha/Campanha_ListarOpcoesParcelamentoAsync 
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarOpcoesParcelamentoAsync 
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#/Campanha/Campanha_ListarOpcoesParcelamentoAsync 
     
     ```csharp
     CampanhaApi api = new();
