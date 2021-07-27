@@ -15,14 +15,14 @@ namespace SdkApiLibrary
 
         public async Task<ProdutoDTO> GetDadosProduto(String idLogista, String idSKu)
         {
-            ProdutoDTO dto = await requestProduto.DoGetAsync("/lojistas/" + idLogista + "/produtos/" + idSKu, null);
+            ProdutoDTO dto = await requestProduto.GetAsync("/lojistas/" + idLogista + "/produtos/" + idSKu, null);
             return dto;
         }
 
         public async Task<ProdutosDTO> GetListaProdutos(String idLogista, List<String> idSKu)
         {
             var queryParams = ArrayQueryParamBuilder(idSKu, nameof(idSKu));
-            ProdutosDTO dto = await requestProdutos.DoGetAsync("/lojistas/" + idLogista + "/produtos" + queryParams, null);
+            ProdutosDTO dto = await requestProdutos.GetAsync("/lojistas/" + idLogista + "/produtos" + queryParams, null);
             return dto;
         }
 
@@ -33,7 +33,7 @@ namespace SdkApiLibrary
                 { "idLojista", idLojista },
                 { "cnpj", cnpj }
             };
-            ProdutoDTO dto = await requestProduto.DoGetAsync("/campanhas/" + idCampanha + "/produtos/" + idSKu, queryParams);
+            ProdutoDTO dto = await requestProduto.GetAsync("/campanhas/" + idCampanha + "/produtos/" + idSKu, queryParams);
             return dto;
         }
 

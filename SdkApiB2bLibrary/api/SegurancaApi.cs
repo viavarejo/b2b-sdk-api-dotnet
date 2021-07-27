@@ -14,7 +14,7 @@ namespace SdkApiLibraries
 
         public async Task<ChaveDTO> GetChave()
         { 
-            return await requestProduto.DoGetAsync("/seguranca/chaves", null);
+            return await requestProduto.GetAsync("/seguranca/chaves", null);
         }
     }
 }

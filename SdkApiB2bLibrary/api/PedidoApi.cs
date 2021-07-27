@@ -6,7 +6,9 @@ using SdkApiB2bLibrary.model.response;
 using SdkApiB2bLibrary.utils;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,7 +62,7 @@ namespace SdkApiB2bLibrary.api
             // create path and map variables
             String path = string.Format("/pedidos/{0}", pathParams["idCompra"]);
 
-            return await RequestUtilPedidoParceiro.DoGetAsync(path, queryParams);
+            return await RequestUtilPedidoParceiro.GetAsync(path, queryParams);
         }
 
         public async Task<ConfirmacaoDTO> PatchPedidosCancelamentoOrConfirmacao(ConfirmacaoReqDTO confirmacaoPedido,
@@ -97,7 +99,21 @@ namespace SdkApiB2bLibrary.api
             String path = String.Format("/pedidos/{0}/entregas/{1}/nfe/{2}", pathParams["idCompra"],
                         pathParams["idCompraEntrega"], pathParams["formato"]);
 
-            return await RequestUtilNotaFiscalPedido.DoGetAsync(path, pathParams);
+            HttpResponseMessage response = await RequestUtilNotaFiscalPedido.GetDownLoadAsync(path);
+            byte[] content = response.Content.ReadAsByteArrayAsync().Result;
+
+            DateTime now = DateTime.Now;
+            String outFile;
+            if (string.Equals(pathParams["formato"].ToLower(), "pdf", StringComparison.OrdinalIgnoreCase))
+            {
+                outFile = "NF_" + now.ToFileTime() + ".PDF";
+            }
+            else
+            {
+                outFile = "NF_" + now.ToFileTime() + ".XML";
+            }
+            File.WriteAllBytes(outFile, content);
+            return outFile;
         }
 
         public async Task<CriacaoPedidoDTO> PostCriarPedido(CriacaoPedidoRequest pedido)

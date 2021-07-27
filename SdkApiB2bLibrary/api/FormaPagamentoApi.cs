@@ -18,7 +18,7 @@ namespace SdkApiLibrary
             queryParams.Add("idCampanha", idCampanha);
             queryParams.Add("cnpj", cnpj);
             queryParams.Add("valorParcelar", valorParcelar);
-            OpcoesParcelamentoDTO response = await requestCampanha.DoGetAsync("/formas-pagamento/" + idFormaPagamento + "/opcoes-parcelamento", queryParams);
+            OpcoesParcelamentoDTO response = await requestCampanha.GetAsync("/formas-pagamento/" + idFormaPagamento + "/opcoes-parcelamento", queryParams);
             return response;
         }
 

@@ -20,7 +20,7 @@ namespace SdkApiLibrary
                 { "dataInicio", dtInicio },
                 { "dataFim", dtFim }
             };
-            CampanhaDTO response = await requestCampanha.DoGetAsync("/campanhas", queryParams);
+            CampanhaDTO response = await requestCampanha.GetAsync("/campanhas", queryParams);
             return response;
         }
 
@@ -32,7 +32,7 @@ namespace SdkApiLibrary
                 { "cnpj", cnpj }
             };
 
-            FormasPagamentoDTO response = await requestFormasPagamento.DoGetAsync("/campanhas/" + idCampanha + "/formas-pagamento/opcoes-parcelamento", queryParams);
+            FormasPagamentoDTO response = await requestFormasPagamento.GetAsync("/campanhas/" + idCampanha + "/formas-pagamento/opcoes-parcelamento", queryParams);
             return response;
         }
 

@@ -48,6 +48,7 @@ namespace SdkApiB2bTest
             var options = new JsonSerializerOptions { WriteIndented = true };
             Console.WriteLine($"Response:{JsonSerializer.Serialize(dto, options)}");
             Assert.IsNotNull(dto);
+            Assert.IsNotNull(dto.Data);
             Assert.AreEqual("Bola de Natal Santini Christmas 10cm Transparente - 3 Unidades.", dto.Data.Nome);
             Assert.AreEqual(dto.Data.Imagem, "http://imagens.extra.com.br/Control/ArquivoExibir.aspx?IdArquivo=253172122");
             Assert.AreEqual(dto.Data.Categoria, 2868);

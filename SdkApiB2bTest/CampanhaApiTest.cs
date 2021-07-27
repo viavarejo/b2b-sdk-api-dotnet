@@ -6,13 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using System.Configuration;
 
 namespace SdkApiB2bTest
 {
     [TestClass]
     public class CampanhaApiTest
     {
-        private readonly CampanhaApi api = new();
+        private CampanhaApi api;
+
+        [TestInitialize]
+        public void Init()
+        {
+            api = new();
+        }
 
         [TestMethod]
         public async Task TestGetCampanhaSucess()
