@@ -59,8 +59,8 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
     Api utilizada para operações de pedidos
      ## Calcular carrinho:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_CalcularCarrinhoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_CalcularCarrinhoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_CalcularCarrinhoAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_CalcularCarrinhoAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_CalcularCarrinhoAsync
 	
         ```csharp
         PedidoApi pedidoApi = new();
@@ -86,8 +86,8 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
 		
      ## Obter os dados de pedido do parceiro:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterPedidoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterPedidoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterPedidoAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterPedidoAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterPedidoAsync
 	
         ```csharp
 		PedidoApi pedidoApi = new();
@@ -105,8 +105,8 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
 		
      ## Confirma ou cancela pedidos pendentes de confirmação:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ConfirmarPedidoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ConfirmarPedidoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ConfirmarPedidoAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ConfirmarPedidoAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ConfirmarPedidoAsync
 	
         ```csharp
 		PedidoApi pedidoApi = new();
@@ -127,8 +127,8 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
 		
      ## Obter nota fiscal do pedido:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
 	
         ```csharp
 		PedidoApi pedidoApi = new PedidoApi();
@@ -142,8 +142,8 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
 		
      ## Criar pedido:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Pedido/Pedido_ObterNFeAsync
 	
         ```csharp
 		PedidoApi pedidoApi = new();
@@ -205,8 +205,8 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
     Api Utilizada para operações de forma de pagamento
      ## Obter opções de parcelamento:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/FormaPagamento/FormaPagamento_ListarOpcoesParcelamentoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/FormaPagamento/FormaPagamento_ListarOpcoesParcelamentoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/FormaPagamento/FormaPagamento_ListarOpcoesParcelamentoAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/FormaPagamento/FormaPagamento_ListarOpcoesParcelamentoAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/FormaPagamento/FormaPagamento_ListarOpcoesParcelamentoAsync
         ```csharp
         FormaPagamentoApi api = new();
         var dto = await api.GetOpcoesParcelamentoAsync("1", "5940", "57.822.975/0001-12", "1000");
@@ -215,24 +215,24 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
     Api Utilizada para operações de produto
      ## Obter dados do produto:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoAsync
         ```csharp
         ProdutoApi api = new();
         var dto = await api.GetDadosProduto("15", "5880205");
         ```
      ## Obter lista de dados dos produtos:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ListarProdutoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ListarProdutoAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ListarProdutoAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ListarProdutoAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ListarProdutoAsync
         ```csharp
         ProdutoApi api = new();
         var dto = await api.GetListaProdutos("15",new List<String> {"5880205","5880206"});
         ```
      ## Obter dados do produto por Campanha:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoPorCampanhaAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoPorCampanhaAsync
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoPorCampanhaAsync
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoPorCampanhaAsync
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Produto/Produto_ObterProdutoPorCampanhaAsync
         ```csharp
         ProdutoApi api = new();
         var dto = await api.GetDadosProdutoCampanha("5940", "5880205", "57.822.975/0001-12", "15");
@@ -241,12 +241,15 @@ A seguir, são apresentadas as APIs e exemplos com as as principais operações 
     Api Utilizada para operações de seguranca
      ## Obter chave pública 2048 bits utilizada para criptografia dos dados do cartão:
     - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Seguranca/Seguranca_ObterChave
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Seguranca/Seguranca_ObterChave
-    - http://api-integracao-casasbahia.hlg-b2b.net/swagger/ui/index#!/Seguranca/Seguranca_ObterChave
+    - http://api-integracao-pontofrio.hlg-b2b.net/swagger/ui/index#!/Seguranca/Seguranca_ObterChave
+    - http://api-integracao-extra.hlg-b2b.net/swagger/ui/index#!/Seguranca/Seguranca_ObterChave
         ```csharp
         SegurancaApi api = new();
         var dto = await api.GetChave();
         ```
-       
+## Testes unitarios
+
+Foram criados na raiz do projeto SdkApiB2bTest uma classe específica para cada uma das 5 API's do B2B, 
+nesses arquivos você encontrará exemplos de como consumir os serviços oferecidos.        
         
         
