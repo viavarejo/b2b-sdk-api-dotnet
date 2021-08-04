@@ -1,6 +1,3 @@
-# sdk-csharp
-Projet
-
 # SDK dotnet para API B2B
 
 Provê os componentes para o uso da API B2B, disponibilizado pela VIA, facilitando a integração com as documentações relacionadas:
