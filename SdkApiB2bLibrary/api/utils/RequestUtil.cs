@@ -13,15 +13,23 @@ namespace SdkApiB2bLibrary.utils
     {
         private readonly string basePath;// = "http://api-integracao-extra.hlg-b2b.net";
         private readonly string basePathMock;// = "http://localhost:8080";
-        private readonly string token = "H9xO4+R8GUy+18nUCgPOlg==";
+        private readonly string token;// = "H9xO4+R8GUy+18nUCgPOlg==";
 
         private readonly HttpClient client = new();
 
         public RequestUtil()
         {
-            basePath = "http://api-integracao-extra.hlg-b2b.net";
-            basePathMock = "http://localhost:8080";
-            token = "H9xO4+R8GUy+18nUCgPOlg==";
+            var configMap = new ExeConfigurationFileMap { ExeConfigFilename = "App.config" };
+            Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configMap, ConfigurationUserLevel.None);
+
+            basePath = config.AppSettings.Settings["Host"].Value;
+            basePathMock = config.AppSettings.Settings["HostMock"].Value;
+            token = config.AppSettings.Settings["Token"].Value;
+
+            //basePath = "http://api-integracao-extra.hlg-b2b.net";
+            //basePathMock = "http://localhost:8080";
+            //token = "H9xO4+R8GUy+18nUCgPOlg==";
+
             //basePath = ConfigurationManager.AppSettings["Host"];
             //basePathMock = ConfigurationManager.AppSettings["HostMock"];
             //token = ConfigurationManager.AppSettings["Token"];

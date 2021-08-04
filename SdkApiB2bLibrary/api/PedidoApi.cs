@@ -102,17 +102,20 @@ namespace SdkApiB2bLibrary.api
             HttpResponseMessage response = await RequestUtilNotaFiscalPedido.GetDownLoadAsync(path);
             byte[] content = response.Content.ReadAsByteArrayAsync().Result;
 
-            DateTime now = DateTime.Now;
-            String outFile;
-            if (string.Equals(pathParams["formato"].ToLower(), "pdf", StringComparison.OrdinalIgnoreCase))
+            String outFile = "";
+            if (content.Length > 0)
             {
-                outFile = "NF_" + now.ToFileTime() + ".PDF";
+                DateTime now = DateTime.Now;
+                if (string.Equals(pathParams["formato"].ToLower(), "pdf", StringComparison.OrdinalIgnoreCase))
+                {
+                    outFile = "NF_" + now.ToFileTime() + ".PDF";
+                }
+                else
+                {
+                    outFile = "NF_" + now.ToFileTime() + ".XML";
+                }
+                File.WriteAllBytes(outFile, content);
             }
-            else
-            {
-                outFile = "NF_" + now.ToFileTime() + ".XML";
-            }
-            File.WriteAllBytes(outFile, content);
             return outFile;
         }
 
